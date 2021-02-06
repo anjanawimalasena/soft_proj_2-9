@@ -1,0 +1,34 @@
+@media all and (min-width: 480px) {
+    
+  .Login {
+
+    padding: 168px;
+    background-image: url("background.jpg");
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-size: cover;
+    background-position: center;
+     
+  
+  }
+    .Login form {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+
+    .SPlogo{
+      margin-top: -20px;
+      margin-left: 420px;
+      width: 220px;
+      height: 200px;
+    }
+
+    .formloc {
+      margin-top: 160px;
+      margin-left: 400px;
+    }
+     
+  }
+
+  
