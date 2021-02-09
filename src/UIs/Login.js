@@ -1,6 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useState } from 'react';
 import '../styles/Login.css';
+import { Link } from 'react-router-dom'
 
 
 export default function Login() {
@@ -33,17 +34,18 @@ export default function Login() {
 <input type="password" className="form-control" id="InputPassword" placeholder="Enter password" ></input>
 
 <p className="forgot-password text-right">
-  <a href="#" className='mb-1'>Forgot password?</a>
-  <h6></h6>
+ {/* <a href="#" className='mb-1'>Forgot password?</a>
+  <h6></h6> */}
  
-  <a href="#" className='mt-1'>Not registered yet?</a>
+  <a href='/Reg' className='mt-1'>Not registered yet?</a>
 </p>
 
 
 <h1></h1>
 
+<Link to="./AccSTmenu">
 <button type="submit" class="btn btn-primary btn-sm">Submit</button>
-
+</Link>
   </form>
             
     </div>

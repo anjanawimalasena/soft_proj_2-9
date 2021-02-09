@@ -15,7 +15,7 @@ import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-
+import { Link } from 'react-router-dom'
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import NotificationsIcon from '@material-ui/icons/Notifications';
@@ -39,8 +39,7 @@ import { MDBContainer, MDBRow, MDBCol, MDBCard, MDBCardUp, MDBCardBody, MDBIcon 
 import Card from 'react-bootstrap/Card'
 import { AccountBox, AddAlert, Home } from '@material-ui/icons';
 import  Menu from '../UIcomponents/Menu';
-
-import { Link } from 'react-router-dom';
+import  Subscriptions from '../UIcomponents/Subscriptions';
 
 
 
@@ -77,7 +76,7 @@ const useStyles = makeStyles((theme) => ({
 
   
   toolbar: {
-    paddingRight: 24, // keep right padding when drawer closed import Link from '@material-ui/core/Link';
+    paddingRight: 24, // keep right padding when drawer closed
   },
   toolbarIcon: {
     display: 'flex',
@@ -175,7 +174,7 @@ const useStyles1 = makeStyles((theme) => ({
 
 
 
-export default function Dashboard() {
+export default function AccSTmenu() {
   const classes = useStyles()
   const [open, setOpen] = React.useState(true);
   const handleDrawerOpen = () => {
@@ -184,7 +183,10 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
+
  
   return (
     <div className="background">
@@ -232,9 +234,11 @@ export default function Dashboard() {
           <Button variant="outline-light">Search</Button>
           </Form>
 
+          <Link to="./Login">
           <IconButton style={{color:"white" , marginLeft:"50px"}} >
             <h6>Logout</h6>
           </IconButton>
+          </Link>
 
           <img  src="splogo.png" className='Logo' ></img>     {/*added*/}
 
@@ -280,31 +284,32 @@ export default function Dashboard() {
               </Avatar>
         </ListItem>   
 
-        <Link to="./Login">
+        
     <ListItem button>
       <ListItemIcon style={{color:"white"}}>
         < Home />
       </ListItemIcon>
-      <ListItemText primary="Home Page" />
+      <ListItemText primary="Main Menu" />
     </ListItem>
-        </Link>
+       
     
-    
+    {/*
     <ListItem button>
       <ListItemIcon style={{color:"white"}}>
         <LocalPostOfficeIcon />
       </ListItemIcon>
       <ListItemText primary="Inbox"  />
     </ListItem>
+    */}
 
-
+  <Link to="./AccSTsubscriptions">
   <ListItem button>
       <ListItemIcon style={{color:"white"}}>
         < AddAlert />
       </ListItemIcon>
-      <ListItemText primary="Subscriptions" />
+      <ListItemText style={{color:"white"}} primary="Subscriptions" />
     </ListItem>
-    
+    </Link>
 
 
 
@@ -321,12 +326,17 @@ export default function Dashboard() {
 
       <main className={classes.content}>
       <div className={classes.appBarSpacer} />
-         <Container maxWidth="md" className={classes.container}>
+         <Container style={{width:'1000px'}} className={classes.container}>
           <Grid container >
           
             {/* list of uploaded videos */}
             <Grid item xs={12} lg={12}>
               <Paper className={classes.paper}>
+
+
+              <Menu/>
+
+
               </Paper>
             </Grid>
             </Grid>   

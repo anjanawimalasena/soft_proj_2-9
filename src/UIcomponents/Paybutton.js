@@ -36,7 +36,7 @@ const paymentMethods = [
   }
 ]
  
-class Example extends Component {
+class Paybutton extends Component {
   loadPaymentDataHandler = paymentData => {
     const paymentToken = paymentData.paymentMethodData.tokenizationData.token
   }
@@ -61,4 +61,4 @@ class Example extends Component {
   }
 }
 
-export default Example
+export default Paybutton

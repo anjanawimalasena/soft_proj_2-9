@@ -70,13 +70,7 @@ render() {
                         placeholder="Password"
                     />
                 </div>
-                <div className="form-group text-left">
-                    <label htmlFor="exampleInputPassword1">Confirm Password</label>
-                    <input type="password" 
-                        className="form-control" 
-                        id="confirmPassword" 
-                        placeholder="Confirm Password"/>
-                </div>
+                
 
                 <div>
                     <label>Add profile picture</label>
@@ -109,6 +103,10 @@ render() {
                     REGISTER
                 </button>
                 </div>
+
+                <p className="forgot-password text-right">
+                <a href='/Login' className='mt-1'>Already have an account?</a>
+                </p>
 
             </Form>
         </div>

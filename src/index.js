@@ -3,15 +3,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Login from './UIs/Login';
-import RegistrationForm from './UIs/Reg';
-import PaymentMethods from './UIs/App';
-import Dashboard from './UIs/AccST';
+import Reg from './UIs/Reg';
+import ChatPage from './UIs/App';
+import AccSTmenu from './UIs/AccSTmenu';
+import AccSTsubscriptions from './UIs/AccSTsubscriptions';
+import App from './UIs/App';
 
 
 ReactDOM.render(
   <React.StrictMode>
-  <RegistrationForm/>
-  </React.StrictMode>,
+  <App/>
+   </React.StrictMode>,
   document.getElementById('root')
 );
  
